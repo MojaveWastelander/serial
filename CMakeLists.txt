@@ -40,3 +40,13 @@ endif()
 ## Include headers
 include_directories(include)
 
+## Install executable
+install(TARGETS ${PROJECT_NAME}
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+)
+
+## Install headers
+install(FILES include/serial/serial.h include/serial/v8stdint.h
+  DESTINATION serial)
